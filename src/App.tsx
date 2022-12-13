@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { pwnedPassword } from "hibp";
 import { GrPowerReset } from "react-icons/gr";
 import { TiClipboard } from "react-icons/ti";
-import stringEntropy from "fast-password-entropy";
+const stringEntropy =  require("fast-password-entropy");
 
 // Functions for generating one random character for the password
 function getRandomLower() {
