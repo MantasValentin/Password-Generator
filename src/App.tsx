@@ -104,7 +104,7 @@ function App() {
     <div className="middle relative py-20 max-w-[80rem]">
       <div className="absolute px-8">
         <form className="input">
-          <div className="py-1 font-medium">
+          <div className="py-1 text-xl max-lg:text-lg font-medium">
             Password has been compromised<sup>1</sup>{" "}
             {pwned === 1 ? "1 time" : String(pwned) + " times"}
           </div>
@@ -148,16 +148,16 @@ function App() {
           ></div>
 
           <div className="py-2">
-            <div className="inline-block font-medium">
+            <div className="inline-block text-xl max-lg:text-lg font-medium">
               Password Quality: {quality(bits, pwned)}
             </div>
-            <div className="inline-block float-right ">
+            <div className="inline-block text-xl max-lg:text-lg float-right ">
               Entropy: {bits} bits<sup>2</sup>
             </div>
           </div>
 
-          <div className="bg-secondary border-1 border-primary border-solid rounded-sm px-4 py-6 mb-2">
-            <div className="flex mb-6">
+          <div className="bg-secondary border-1 border-primary border-solid rounded-sm px-4 py-10 max-lg:py-6 mb-2">
+            <div className="flex mb-10 max-lg:mb-6">
               <div className="slider-box flex-1 mr-2 relative">
                 <input
                   type="range"
@@ -165,7 +165,7 @@ function App() {
                   max="128"
                   step="1"
                   value={`${passwordLength}`}
-                  className="slider absolute w-full"
+                  className="slider absolute w-full h-[0.85rem]"
                   onChange={(e) => setPasswordLength(Number(e.target.value))}
                 ></input>
               </div>
@@ -186,45 +186,45 @@ function App() {
             <div className="relative">
               <div className="center flex absolute">
                 <div
-                  className={`mr-3 relative h-8 w-14 bg-third border-1 border-solid border-fourth rounded-sm ${
+                  className={`mr-3 relative h-10 w-20 max-lg:h-8 max-lg:w-14 bg-third border-1 border-solid border-fourth rounded-sm ${
                     randomUpper ? "active" : "item-box"
                   }`}
                   onClick={() => setRandomUpper(!randomUpper)}
                 >
-                  <div className="center absolute">A-Z</div>
+                  <div className="center absolute text-xl max-lg:text-base">A-Z</div>
                 </div>
 
                 <div
-                  className={`mr-3 relative h-8 w-14 bg-third border-1 border-solid border-fourth rounded-sm ${
+                  className={`mr-3 relative h-10 w-20 max-lg:h-8 max-lg:w-14 bg-third border-1 border-solid border-fourth rounded-sm ${
                     randomLower ? "active" : "item-box"
                   }`}
                   onClick={() => setRandomLower(!randomLower)}
                 >
-                  <div className="center absolute">a-z</div>
+                  <div className="center absolute text-xl max-lg:text-base">a-z</div>
                 </div>
 
                 <div
-                  className={`mr-3 relative h-8 w-14 bg-third border-1 border-solid border-fourth rounded-sm ${
+                  className={`mr-3 relative h-10 w-20 max-lg:h-8 max-lg:w-14 bg-third border-1 border-solid border-fourth rounded-sm ${
                     randomNumber ? "active" : "item-box"
                   }`}
                   onClick={() => setRandomNumber(!randomNumber)}
                 >
-                  <div className="center absolute">0-9</div>
+                  <div className="center absolute text-xl max-lg:text-base">0-9</div>
                 </div>
 
                 <div
-                  className={`relative h-8 w-20 bg-third border-1 border-solid border-fourth rounded-sm ${
+                  className={`relative h-10 w-20 max-lg:h-8 max-lg:w-14 bg-third border-1 border-solid border-fourth rounded-sm ${
                     randomSymbol ? "active" : "item-box"
                   }`}
                   onClick={() => setRandomSymbol(!randomSymbol)}
                 >
-                  <div className="center absolute">/*+&...</div>
+                  <div className="center absolute text-xl max-lg:text-base">/*+&...</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="">
+          <div className="text-xl max-lg:text-base">
             <p>1: Found in a breached and publicly leaked password database.</p>
             <p>
               2: The total number of possible combinations in bits, f({bits}) =
