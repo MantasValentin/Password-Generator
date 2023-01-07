@@ -104,7 +104,7 @@ function App() {
     <div className="middle relative py-20 max-w-[80rem]">
       <div className="absolute px-8">
         <form className="input">
-          <div className="py-1 text-xl max-lg:text-lg font-medium">
+          <div className="py-1 text-lg max-sm:text-base font-medium">
             Password has been compromised<sup>1</sup>{" "}
             {pwned === 1 ? "1 time" : String(pwned) + " times"}
           </div>
@@ -148,10 +148,10 @@ function App() {
           ></div>
 
           <div className="py-2">
-            <div className="inline-block text-xl max-lg:text-lg font-medium">
+            <div className="inline-block text-lg max-sm:text-base font-medium">
               Password Quality: {quality(bits, pwned)}
             </div>
-            <div className="inline-block text-xl max-lg:text-lg float-right ">
+            <div className="inline-block text-lg max-sm:text-base float-right ">
               Entropy: {bits} bits<sup>2</sup>
             </div>
           </div>
@@ -224,7 +224,7 @@ function App() {
             </div>
           </div>
 
-          <div className="text-xl max-lg:text-base">
+          <div className="text-base max-lg:text-base">
             <p>1: Found in a breached and publicly leaked password database.</p>
             <p>
               2: The total number of possible combinations in bits, f({bits}) =
