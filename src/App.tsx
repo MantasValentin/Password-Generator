@@ -165,7 +165,7 @@ function App() {
                   max="128"
                   step="1"
                   value={`${passwordLength}`}
-                  className="slider absolute w-full h-[0.85rem]"
+                  className="slider absolute w-full"
                   onChange={(e) => setPasswordLength(Number(e.target.value))}
                 ></input>
               </div>
