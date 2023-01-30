@@ -1,0 +1,105 @@
+.slider {
+  appearance: none;
+  height: 10px;
+  border-radius: 10px;
+  opacity: 0.7;
+  transition: .2s;
+  border: 1px solid #9e9e9e;
+  background-color: #cdcdcd;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #6e6e6e;
+  background: #aaaaaa;
+  cursor: pointer;
+}
+
+.reset-box {
+  opacity: 0.7;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.reset-box:hover {
+  opacity: 1;
+}
+
+.reset-box:active {
+  transform: scale(0.9);
+  background-color: #cdcdcd;
+}
+
+.save-box {
+  opacity: 0.7;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.save-box:hover {
+  opacity: 1;
+}
+
+.save-box:active {
+  transform: scale(0.9);
+  background-color: #cdcdcd;
+}
+
+.password-box {
+  opacity: 0.7;
+  transition: .2s;
+}
+
+.password-box:hover {
+  opacity: 1;
+}
+
+.item-box {
+  opacity: 0.6;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.item-box:hover {
+  opacity: 1;
+}
+
+.item-box:active {
+  transform: scale(0.9);
+  background-color: #7d7d7d;
+}
+
+.active {
+  opacity: 1;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.active:active {
+  transform: scale(0.9);
+  background-color: #7d7d7d;
+}
+
+.border-1 {
+  border-width: 1px;
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.middle {
+  left: 50%;
+  transform: translateX(-50%);
+}
